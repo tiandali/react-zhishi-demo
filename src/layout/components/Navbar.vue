@@ -3,7 +3,7 @@
     <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" /> -->
 
     <!-- <breadcrumb class="breadcrumb-container" /> -->
-
+    <h2>xxxxx建设项目绩效评估分析系统</h2>
     <div class="right-menu">
       <!-- <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
@@ -27,7 +27,8 @@
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown> -->
-      <img src="../../assets/img/cxyicon-light.png" alt="" />
+
+      <!-- <img src="../../assets/img/cxyicon-light.png" alt="" /> -->
     </div>
   </div>
 </template>
@@ -62,6 +63,13 @@ export default {
   height: 92px;
   overflow: hidden;
   position: relative;
+  background: pink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  h2 {
+  }
   .hamburger-container {
     line-height: 46px;
     height: 100%;

@@ -72,7 +72,7 @@ export default {
     top: 0;
   }
   .navbar_container {
-    margin-left: 30px;
+    // margin-left: 30px;
     border-bottom: 1px solid #a5adc6;
   }
 }
