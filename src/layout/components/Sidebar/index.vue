@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'has-logo': showLogo }">
     <div class="siderbar_wraper">
-      <logo v-if="showLogo" :collapse="isCollapse" />
+      <!-- <logo v-if="showLogo" :collapse="isCollapse" /> -->
       <el-scrollbar wrap-class="scrollbar-wrapper">
         <el-menu
           :default-active="activeMenu"
@@ -59,4 +59,8 @@ export default {
   }
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.siderbar_wraper {
+  // height: calc(100vh - 95px);
+}
+</style>

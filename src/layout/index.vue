@@ -5,11 +5,15 @@
       class="drawer-bg"
       @click="handleClickOutside"
     />
-    <sidebar class="sidebar-container" />
+    <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
+      <navbar />
+    </div>
+    <!-- <sidebar class="sidebar-container" /> -->
     <div class="main-container">
-      <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
+      <!-- <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
         <navbar />
-      </div>
+      </div> -->
+      <sidebar class="sidebar-container" />
       <app-main />
     </div>
   </div>
@@ -71,6 +75,13 @@ export default {
     margin-left: 30px;
     border-bottom: 1px solid #a5adc6;
   }
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  display: flex;
 }
 .drawer-bg {
   background: #000;
