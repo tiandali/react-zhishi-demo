@@ -77,7 +77,7 @@ export const constantRoutes = [
     name: "Ability",
     children: [
       {
-        path: "/Ability/index",
+        path: "/ability/index",
         component: () => import("@/views/Ability/index"), // Parent router-view
         name: "Menu1",
         meta: { title: "能力目标定义", icon: "user" }

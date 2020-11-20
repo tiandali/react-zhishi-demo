@@ -22,8 +22,10 @@ export default {
 <style scoped>
 .app-main {
   /*50 = navbar  */
-  background-color: #f5f6fa;
-  max-height: calc(100vh - 95px);
+  /* background-color: #f5f6fa; */
+  background-color: #fff;
+  /* max-height: calc(100vh - 95px); */
+  max-height: calc(100vh - 50px);
   width: 100%;
   position: relative;
   overflow: hidden;
