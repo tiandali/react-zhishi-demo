@@ -84,6 +84,45 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: "/abilityAnalysis",
+    component: Layout,
+    name: "AbilityAnalysis",
+    children: [
+      {
+        path: "/abilityAnalysis/index",
+        component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
+        name: "Menu1",
+        meta: { title: "能力目标分析", icon: "user" }
+      }
+    ]
+  },
+  {
+    path: "/projectAnalysis",
+    component: Layout,
+    name: "ProjectAnalysis",
+    children: [
+      {
+        path: "/projectAnalysis/index",
+        component: () => import("@/views/ProjectAnalysis/index"), // Parent router-view
+        name: "Menu1",
+        meta: { title: "项目匹配分析", icon: "user" }
+      }
+    ]
+  },
+  {
+    path: "/combinationAnalysis",
+    component: Layout,
+    name: "CombinationAnalysis",
+    children: [
+      {
+        path: "/combinationAnalysis/index",
+        component: () => import("@/views/CombinationAnalysis/index"), // Parent router-view
+        name: "Menu1",
+        meta: { title: "项目投资组合分析", icon: "user" }
+      }
+    ]
+  },
   // {
   //   path: "/",
   //   component: Layout,
