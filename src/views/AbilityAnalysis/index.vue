@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-20 13:57:23
- * @LastEditTime: 2020-11-20 18:03:35
+ * @LastEditTime: 2020-11-21 00:01:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\AbilityAnalysis\index.vue
@@ -51,19 +51,24 @@
         </el-table>
       </el-tab-pane>
       <el-tab-pane label="目标匹配重复度">
-        <el-table :data="tableData" style="width: 100%;" :cell-class-name="cellClass">
+        <el-table :data="tableDatas" style="width: 100%;">
           <el-table-column prop="date" label="" width="150" align="center"> </el-table-column>
-          <el-table-column prop="date" label="" width="150" align="center"> </el-table-column>
-          <el-table-column align="center" v-for="(item,index) in tableData" :key="index" :label="item.date">
-            <el-table-column label="功能优先项" width="120" align="center">
-              <template scope="{row}">
-                <div class="three-target">
-                  <div class="default-class">{{row.province}}</div>
-                  <div class="default-class">{{row.province}}</div>
-                </div>
-                <div class="three-target">
-                  <div class="default-class">{{row.province}}</div>
-                  <div class="default-class"></div>
+          <el-table-column prop="province" label="" width="150" align="center"> </el-table-column>
+          <el-table-column align="center" v-for="(item,index) in tableDatas" :key="index" :label="item.date">
+            <el-table-column :label="item.province+''" width="120" align="center">
+              <template slot-scope="{row}">
+                <div :class="(parseInt(row.percentage[index]) >= 80 || parseInt(row.weights[index]) >= 80)?'blue':
+                  (parseInt(row.percentage[index]) >= 70 || parseInt(row.weights[index]) >= 70)?'yellow':
+                  (parseInt(row.percentage[index]) >= 50 || parseInt(row.weights[index]) >= 50)?'light-blue':
+                  (row.repeat[index] == '')?'gray':''">
+                  <div class="three-target">
+                    <div class="default-class">{{row.repeat[index]}}</div>
+                    <div class="default-class">{{row.percentage[index]}}</div>
+                  </div>
+                  <div class="three-target">
+                    <div class="default-class">{{row.weights[index]}}</div>
+                    <div class="default-class"></div>
+                  </div>
                 </div>
               </template>
             </el-table-column>
@@ -75,13 +80,13 @@
 </template>
 
 <script>
-import { tableData , options , option, targetOptions} from "./data" 
+import { tableData, tableDatas, options , option, targetOptions} from "./data"
 
 export default {
   data() {
     return {
       tableData: tableData,
-      radio: '目标匹配矩阵',
+      tableDatas: tableDatas,
       options: options,
       option: option,
       targetOptions: targetOptions,
@@ -100,9 +105,6 @@ export default {
       console.log(formName)
       this.$refs[formName].resetFields();
     },
-    cellClass(row, column, rowIndex, columnIndex){
-      console.log(row, column, rowIndex, columnIndex)
-    }
   },
 };
 </script>
@@ -110,6 +112,18 @@ export default {
 <style scoped>
 .three-target{
   display: flex;
+}
+.light-blue{
+  background-color: rgb(204, 255, 255);
+}
+.blue{
+  background-color: rgb(0, 255, 255);
+}
+.yellow{
+  background-color: rgb(255, 255, 0);
+}
+.gray{
+  background-color: rgb(192, 192, 192);
 }
 .default-class{
   flex: 1;

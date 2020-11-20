@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-20 13:57:23
- * @LastEditTime: 2020-11-20 17:28:40
+ * @LastEditTime: 2020-11-21 00:45:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\ProjectAnalysis\index.vue
@@ -64,25 +64,26 @@
       </el-tab-pane>
       <el-tab-pane label="匹配度评价">
         <el-table :data="tableData" style="width: 100%;">
-          <el-table-column prop="date" label="目标/功能项" width="150" align="center"> </el-table-column>
-          <el-table-column align="center" v-for="(item,index) in tableData" :key="index" :label="item.date">
-            <el-table-column prop="province" label="功能优先项" width="120" align="center">
-              <template scope="{row}">
-                <div :class="row.province>=1?'red':''">{{row.province}}</div>
+          <el-table-column prop="date" label="目标/功能项" width="150" align="center"></el-table-column>
+          <el-table-column align="center" v-for="(item,index) in tableData" :key="index" :label="item.zip+''" v-if="index<5">
+            <el-table-column :label="item.name" width="120" align="center">
+              <template slot-scope="{row}">
+                <div :class="row.province[index]=='Low'?'light-blue':row.province[index]=='Moderate'?'blue':row.province[index]=='Strong'?'yellow':''">{{row.province[index]}}</div>
               </template>
             </el-table-column>
           </el-table-column>
         </el-table>
       </el-tab-pane>
       <el-tab-pane label="能力贡献度评价">
-        123123
+        <div id="echarts1" style="width: 1200px;height:768px;" />
       </el-tab-pane>
     </el-tabs>
   </div>
 </template>
 
 <script>
-import { tableData , options , option, targetOptions} from "./data" 
+import { tableData , options , option, targetOptions} from "./data"
+import 'echarts-gl';
 
 export default {
   data() {
@@ -98,21 +99,70 @@ export default {
       }
     };
   },
-  components: {
-    
-  },
   mounted() {
-
+    this.drawChart();
   },
   methods: {
-    
+    drawChart() {
+      // 基于准备好的dom，初始化echarts实例
+      const myChart = this.$echarts.init(document.getElementById('echarts1'));
+      const option = {
+        title: {
+          text: '投资数据',
+          subtext: '数据来自网络',
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow',
+          },
+        },
+        legend: {
+          data: ['2011年', '2012年'],
+        },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true,
+        },
+        xAxis: {
+          type: 'value',
+          boundaryGap: [0, 0.01],
+        },
+        yAxis: {
+          type: 'category',
+          data: ['巴西', '印尼', '美国', '印度', '中国', '总计'],
+        },
+        series: [
+          {
+            name: '2011年',
+            type: 'bar',
+            data: [18203, 23489, 29034, 104970, 131744, 630230],
+          },
+          {
+            name: '2012年',
+            type: 'bar',
+            data: [19325, 23438, 31000, 121594, 134141, 681807],
+          },
+        ],
+      };
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    },
   },
 };
 </script>
 
 <style>
-.red {
-  background: red;
+.yellow{
+  background-color: rgb(255, 255, 0);
+}
+.light-blue{
+  background-color: rgb(204, 255, 255);
+}
+.blue{
+  background-color: rgb(0, 255, 255);
 }
 </style>
 

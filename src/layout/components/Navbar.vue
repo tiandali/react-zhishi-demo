@@ -63,7 +63,7 @@ export default {
   height: 92px;
   overflow: hidden;
   position: relative;
-  background: pink;
+  background: #292f4c;
   display: flex;
   justify-content: flex-end;
   align-items: center;

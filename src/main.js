@@ -11,7 +11,10 @@ import "@/styles/index.scss"; // global css
 import App from "./App";
 import store from "./store";
 import router from "./router";
-
+import Antd from "ant-design-vue";
+import "ant-design-vue/dist/antd.css";
+import contentmenu from "v-contextmenu";
+import "v-contextmenu/dist/index.css";
 import "@/icons"; // icon
 import "@/permission"; // permission control
 
@@ -35,7 +38,8 @@ if (process.env.NODE_ENV === "development") {
 // Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
 Vue.use(ElementUI);
-
+Vue.use(Antd);
+Vue.use(contentmenu);
 Vue.config.productionTip = false;
 
 new Vue({

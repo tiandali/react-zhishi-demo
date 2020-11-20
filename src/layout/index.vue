@@ -5,15 +5,15 @@
       class="drawer-bg"
       @click="handleClickOutside"
     />
-    <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
+    <!-- <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
       <navbar />
-    </div>
-    <!-- <sidebar class="sidebar-container" /> -->
+    </div> -->
+    <sidebar class="sidebar-container" />
     <div class="main-container">
       <!-- <div :class="{ 'fixed-header': fixedHeader, navbar_container: true }">
         <navbar />
       </div> -->
-      <sidebar class="sidebar-container" />
+      <!-- <sidebar class="sidebar-container" /> -->
       <app-main />
     </div>
   </div>
@@ -63,25 +63,28 @@ export default {
 @import "~@/styles/variables.scss";
 
 .app-wrapper {
-  @include clearfix;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  &.mobile.openSidebar {
-    position: fixed;
-    top: 0;
-  }
-  .navbar_container {
-    // margin-left: 30px;
-    border-bottom: 1px solid #a5adc6;
-  }
+  // @include clearfix;
+  // position: relative;
+  // height: 100%;
+  // width: 100%;
+  // &.mobile.openSidebar {
+  //   position: fixed;
+  //   top: 0;
+  // }
+  // .navbar_container {
+  //   // margin-left: 30px;
+  //   border-bottom: 1px solid #a5adc6;
+  // }
 }
 .app-wrapper {
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  // flex-direction: column;
 }
 .main-container {
   display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .drawer-bg {
   background: #000;
