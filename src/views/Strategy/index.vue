@@ -1,13 +1,24 @@
 <template>
-  <div style="padding:30px">
-    <a-tabs>
-      <a-tab-pane key="1" tab="战略目标编辑">
-        <StrategyEdit />
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="战略目标体系概览">
-        <Overview />
-      </a-tab-pane>
-    </a-tabs>
+  <div class="strategy" style="padding:30px">
+    <a-radio-group
+      :default-value="value"
+      v-model="value"
+      @change="onChange"
+      button-style="solid"
+    >
+      <a-radio-button value="a">
+        战略目标编辑
+      </a-radio-button>
+      <a-radio-button value="b">
+        战略目标体系概览
+      </a-radio-button>
+    </a-radio-group>
+    <div class="containerStyle" v-if="value === 'a'">
+      <StrategyEdit />
+    </div>
+    <div class="containerStyle" v-else>
+      <Overview />
+    </div>
   </div>
 </template>
 <script>
@@ -20,20 +31,31 @@ export default {
     Overview
   },
   data() {
-    return {};
+    return {
+      animated: false,
+      value: "a"
+    };
   },
   created() {},
   mounted() {},
   watch: {},
-  methods: {}
+  methods: {
+    onChange(e) {
+      console.log("radio1 checked", e.target.value);
+      this.value = e.target.value;
+    }
+  }
 };
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-// .homeMain {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
+.strategy {
+  // display: flex;
+  // flex: 1;
+  .containerStyle {
+    margin-top: 20px;
+  }
+}
 // .cardStyle {
 //   width: 650px;
 //   height: 330px;
