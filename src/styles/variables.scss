@@ -1,0 +1,28 @@
+// sidebar
+$menuText: #fff; // 标题
+$menuActiveText: #000; // 标题激活颜色
+$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: rbga(0, 0, 0, 0);
+$menuHover: #fff;
+$menuInit: rgba(0, 0, 0, 0);
+$subMenuBg: rgba(0, 0, 0, 0);
+$subMenuHover: #fff;
+$hoverUl: rgb(9, 37, 158);
+
+$sideBarWidth: 280px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  menuInit: $menuInit;
+  hoverUl: $hoverUl;
+}
