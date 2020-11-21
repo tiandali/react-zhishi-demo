@@ -112,7 +112,9 @@
         </el-table>
       </el-tab-pane>
       <el-tab-pane label="能力贡献度评价">
-        <div id="echarts1" style="width: 1200px;height:768px;" />
+        <div class="pic"><img src="../../assets/img/charts.png" alt="" /></div>
+
+        <!-- <div id="echarts1" style="width: 1200px;height:768px;" /> -->
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -200,5 +202,13 @@ export default {
 }
 .blue {
   background-color: rgb(0, 255, 255);
+}
+.pic {
+  width: 1500px;
+  height: 700px;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
 }
 </style>

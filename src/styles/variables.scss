@@ -4,7 +4,10 @@ $menuActiveText: #000; // 标题激活颜色
 $subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
 
 $menuBg: rbga(0, 0, 0, 0);
+$menuHover-active: rgb(54, 102, 228);
 $menuHover: #fff;
+$menuHover-hover: rgba(54, 102, 228, 0.2);
+
 $menuInit: rgba(0, 0, 0, 0);
 $subMenuBg: rgba(0, 0, 0, 0);
 $subMenuHover: #fff;
