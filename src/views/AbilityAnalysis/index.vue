@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-20 13:57:23
- * @LastEditTime: 2020-11-21 00:01:41
+ * @LastEditTime: 2020-11-21 10:43:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\AbilityAnalysis\index.vue
@@ -35,18 +35,18 @@
         <el-table :data="tableData" style="width: 100%;">
           <el-table-column prop="date" label="目标/功能项" width="150" align="center"> </el-table-column>
           <el-table-column label="XXXX战略预警" align="center">
-            <el-table-column prop="province" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="city" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="zip" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="name" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="weights" label="功能优先项" width="120" align="center"></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.province[0]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.city[0]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.zip[0]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.name[0]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.weights[0]}}</template></el-table-column>
           </el-table-column>
           <el-table-column label="XXX信息支援" align="center">
-            <el-table-column prop="province" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="city" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="zip" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="name" label="功能优先项" width="120" align="center"></el-table-column>
-            <el-table-column prop="weights" label="功能优先项" width="120" align="center"></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.province[1]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.city[1]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.zip[1]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.name[1]}}</template></el-table-column>
+            <el-table-column label="功能优先项" width="120" align="center"><template slot-scope="{row}">{{row.weights[1]}}</template></el-table-column>
           </el-table-column>
         </el-table>
       </el-tab-pane>
@@ -112,6 +112,8 @@ export default {
 <style scoped>
 .three-target{
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .light-blue{
   background-color: rgb(204, 255, 255);

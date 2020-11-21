@@ -1,77 +1,79 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 14:34:18
- * @LastEditTime: 2020-11-20 23:36:10
+ * @LastEditTime: 2020-11-21 10:45:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\Ability\data.js
  */
+
+//目标匹配矩阵数据 第一行表头和第二行表头需要手动修改
 export const tableData = [
   {
-    date: "权重",
-    province: 1,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    date: "权重", //第一列表头
+    province: [1,2], //2列数据为一组
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J11-兵力管理",
-    province: 1,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J12-兵力建设",
-    province: 1,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J13-配置",
-    province: 0.2,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J14-战备",
-    province: 0.2,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J21-ISR-1",
-    province: 0.2,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
   {
     date: "J21-ISR-2",
-    province: 0.2,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    province: [1,2],
+    city: [1.33,1.23],
+    zip: [3,5],
+    name: [4,6],
+    weights: [7,9]
   },
 ];
-
+//目标匹配重复度数据
 export const tableDatas = [
   {
-    date: "权重",
-    province: 82,
-    repeat: [],
-    percentage: [],
-    weights: []
+    date: "权重", //第一列和第一行表头
+    province: 82, //第二列和第二行表头
+    repeat: [], //表格第一个数字
+    percentage: [],//表格左上角的百分比
+    weights: []//表格右下角的百分比
   },
   {
     date: "J11-兵力管理",

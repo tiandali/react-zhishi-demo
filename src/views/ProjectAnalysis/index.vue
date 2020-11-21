@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-20 13:57:23
- * @LastEditTime: 2020-11-21 00:45:58
+ * @LastEditTime: 2020-11-21 10:23:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\ProjectAnalysis\index.vue
@@ -38,22 +38,22 @@
                 <el-input v-model="form.name"></el-input>
               </el-form-item>
               <el-form-item label="任务领域">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.data"></el-input>
               </el-form-item>
               <el-form-item label="主管部门">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.table"></el-input>
               </el-form-item>
               <el-form-item label="采办项目类别">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.target"></el-input>
               </el-form-item>
               <el-form-item label="任务保障类别">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.hours"></el-input>
               </el-form-item>
               <el-form-item label="任务重要度">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.pane"></el-input>
               </el-form-item>
               <el-form-item label="功能">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.province"></el-input>
               </el-form-item>
               <el-form-item label="主要服务能力">
                 <el-input type="textarea" v-model="form.desc"></el-input>

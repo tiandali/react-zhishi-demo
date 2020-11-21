@@ -1,17 +1,17 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 14:34:18
- * @LastEditTime: 2020-11-21 00:29:50
+ * @LastEditTime: 2020-11-21 10:21:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\Ability\data.js
  */
-export const tableData = [
+export const tableData = [ //匹配度评价数据
   {
-    date: "权重",
-    province: ['Low','','','Low',''],
-    name: 'mzassa',
-    zip: 200333,
+    date: "权重",  //第一列标题
+    province: ['Low','','','Low',''], //行数据
+    name: 'mzassa', //第二行标题
+    zip: 200333, //第一行标题
   },
   {
     date: "J11-兵力管理",

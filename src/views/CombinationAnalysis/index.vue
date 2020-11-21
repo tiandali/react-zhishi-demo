@@ -125,7 +125,6 @@ export default {
         [2, 21, 4],
         [2, 22, 2],
         [2, 23, 4],
-
       ];
       const option = {
         tooltip: {},
