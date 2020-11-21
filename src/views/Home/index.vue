@@ -4,18 +4,20 @@
       <img :src="banner" style="width: 100%; height: 140px" alt="" />
       <h2 class="title">{{ titleName }}</h2>
     </div>
-    <a :href="item.href" v-for="item in arr" :key="item.name">
-      <div class="cardStyle">
-        <div class="pic">
-          <img :src="item.img" style="marginTop:-20px" />
-        </div>
+    <div class="container">
+      <a :href="item.href" v-for="item in arr" :key="item.name">
+        <div class="cardStyle">
+          <div class="pic">
+            <img :src="item.img" style="width:300px,height:300px" />
+          </div>
 
-        <h2 class="text">
-          {{ item.name }}
-          <img :src="icon" alt="" />
-        </h2>
-      </div>
-    </a>
+          <h2 class="text">
+            {{ item.name }}
+            <img :src="icon" alt="" />
+          </h2>
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 <script>
@@ -70,41 +72,39 @@ export default {
       font-size: 25px;
     }
   }
-}
-.cardStyle {
-  width: 600px;
-  height: 330px;
-  background: #fff;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 8px rgba(232, 237, 246, 1);
-  // position: relative;
-  .pic {
-    img {
-      height: 240px;
-    }
-  }
-  .text {
-    // position: absolute;
-    // bottom: -35px;
-    // left: 0;
-    color: #fff;
-
-    padding: 0 20px;
-
-    width: 100%;
-    height: 50px;
-    background-color: rgb(54, 102, 228);
+  .container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    img {
-      width: 40px;
-      height: 40px;
+    flex-wrap: wrap;
+    width: 1500px;
+    .cardStyle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 330px;
+      margin: 20px;
+      box-shadow: 2px 2px 8px rgba(232, 237, 246, 1);
+      .pic {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .text {
+      color: #fff;
+      padding: 0 20px;
+      width: 100%;
+      height: 50px;
+      background-color: rgb(54, 102, 228);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

@@ -80,7 +80,7 @@ export const constantRoutes = [
         path: "/ability/index",
         component: () => import("@/views/Ability/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力目标定义", icon: "eye-open" }
+        meta: { title: "能力指标定义", icon: "eye-open" }
       }
     ]
   },
@@ -93,7 +93,7 @@ export const constantRoutes = [
         path: "/abilityAnalysis/index",
         component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力目标分析", icon: "table" }
+        meta: { title: "能力-目标分析", icon: "table" }
       }
     ]
   },
@@ -106,7 +106,7 @@ export const constantRoutes = [
         path: "/projectAnalysis/index",
         component: () => import("@/views/ProjectAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "项目匹配分析", icon: "tree" }
+        meta: { title: "项目-能力匹配分析", icon: "tree" }
       }
     ]
   },
