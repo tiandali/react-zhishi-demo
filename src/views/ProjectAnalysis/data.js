@@ -1,67 +1,71 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 14:34:18
- * @LastEditTime: 2020-11-20 17:22:52
+ * @LastEditTime: 2020-11-21 10:21:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ALK-demo\src\views\Ability\data.js
  */
-export const tableData = [
+export const tableData = [ //匹配度评价数据
   {
-    date: "权重",
-    province: 1,
-    city: 1.33,
-    zip: 200333,
-    name: 123,
-    weights: 33
+    date: "权重",  //第一列标题
+    province: ['Low','','','Low',''], //行数据
+    name: 'mzassa', //第二行标题
+    zip: 200333, //第一行标题
   },
   {
     date: "J11-兵力管理",
-    province: 1,
-    city: 1.33,
+    province: ['Low','','Low','Low','Moderate'],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
   },
   {
     date: "J12-兵力建设",
-    province: 1,
-    city: 1.33,
+    province: ['Moderate','Low','Moderate','Low',''],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
   },
   {
     date: "J13-配置",
-    province: 0.2,
-    city: 1.33,
+    province: ['None','','','','Low'],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
   },
   {
     date: "J14-战备",
-    province: 0.2,
-    city: 1.33,
+    province: ['Low','','Low','','Low'],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
   },
   {
     date: "J21-ISR-1",
-    province: 0.2,
-    city: 1.33,
+    province: ['Moderate','','Low','Moderate','Strong'],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
   },
   {
     date: "J21-ISR-2",
-    province: 0.2,
-    city: 1.33,
+    province: ['Low','Strong','Low','Moderate',''],
+    name: 'mzassa',
     zip: 200333,
-    name: 123,
-    weights: 33
+  },
+  {
+    date: "J21-ISR-2",
+    province: ['','','','Low','Moderate'],
+    name: 'mzassa',
+    zip: 200333,
+  },
+  {
+    date: "J21-ISR-2",
+    province: ['Low','','','Moderate','Moderate'],
+    name: 'mzassa',
+    zip: 200333,
+  },
+  {
+    date: "J21-ISR-2",
+    province: ['Moderate','Strong','','Low',''],
+    name: 'mzassa',
+    zip: 200333,
   },
 ];
 
