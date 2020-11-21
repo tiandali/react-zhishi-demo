@@ -1,91 +1,35 @@
-# vue-admin-template
+# 项目启动前提(运行环境准备)
 
-English | [简体中文](./README-zh.md)
+    第一步： 安装node.js并且版本大于12.xx,配置环境变量，进入我的电脑，右击属性->高级系统设置->高级tab下面的环境变量，找到 path，将 node 的安装路径添加到其中，点击确定。
+    第二步： 执行命令检查 node 版本：node -v
+    第三步：执行命令检查 node 版本：npm -v
 
-> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
+# 项目启动
 
-**Live demo:** http://panjiachen.github.io/vue-admin-template
+安装完成后执行命令：npm run dev
 
+## 系统名称标题路由更改
 
-**The current version is `v4.0+` build on `vue-cli`. If you want to use the old version , you can switch branch to [tag/3.11.0](https://github.com/PanJiaChen/vue-admin-template/tree/tag/3.11.0), it does not rely on `vue-cli`**
+路由：src/router/index.js
+菜单上面的系统名称:src\layout\components\Sidebar\Logo.vue
+首页系统标题名称 src\views\Home\index.vue
 
-## Build Setup
+## 数据修改
 
+战略目标定义模块的树图数据，目标编辑的数据在 src/view/Strategy/treeData,
+体系概览的数据在 src/view/Strategy/treeDataOver,
 
-```bash
-# clone the project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
+能力目标体系和战略目标定义相同,目标编辑的数据在 src/view/Ability/treeData,
+体系概览的数据在 src/view/Strategy/treeDataOver,
 
-# enter the project directory
-cd vue-admin-template
+能力目标分析模块：数据在 src/view/AbilityAnalysis/data.js,文字名称更改在 src/view/AbilityAnalysis/index.vue,主要就是表头文字
+匹配矩阵的数据:自上而下分别是：targetOptions，option,options,tableData;
+目标匹配重复度数据:tableDatas
 
-# install dependency
-npm install
+项目匹配分析：src/view/ProjectAnalysis/index.vue 文件
+数据：src/view/ProjectAnalysis/data.js
+项目数据：下拉框数据是 options,option,targetOptions，
+匹配度评价数据： tableData,
+能力贡献度评价：数据在 index.vue 中，
 
-# develop
-npm run dev
-```
-
-This will automatically open http://localhost:9528
-
-## Build
-
-```bash
-# build for test environment
-npm run build:stage
-
-# build for production environment
-npm run build:prod
-```
-
-## Advanced
-
-```bash
-# preview the release environment effect
-npm run preview
-
-# preview the release environment effect + static resource analysis
-npm run preview -- --report
-
-# code format check
-npm run lint
-
-# code format check and auto fix
-npm run lint -- --fix
-```
-
-Refer to [Documentation](https://panjiachen.github.io/vue-element-admin-site/guide/essentials/deploy.html) for more information
-
-## Demo
-
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
-
-## Extra
-
-If you want router permission && generate menu by user roles , you can use this branch [permission-control](https://github.com/PanJiaChen/vue-admin-template/tree/permission-control)
-
-For `typescript` version, you can use [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Credits: [@Armour](https://github.com/Armour))
-
-## Related Project
-
-- [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-- [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
-
-- [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
-
-- [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
-
-## Browsers support
-
-Modern browsers and Internet Explorer 10+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
-
-## License
-
-[MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
-
-Copyright (c) 2017-present PanJiaChen
+项目投资组合分析的数据都在 src/view/CombinationAnalysis/index.vue 中

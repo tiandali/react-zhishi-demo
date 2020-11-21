@@ -37,7 +37,7 @@ export default {
           img: require("../../assets/img/2.png")
         },
         {
-          name: "项目能力定义",
+          name: "项目匹配分析",
           href: "/#/projectAnalysis/index",
           img: require("../../assets/img/3.png")
         },
