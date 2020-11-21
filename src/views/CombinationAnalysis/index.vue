@@ -1,6 +1,6 @@
 <template>
   <div class="contain">
-    <el-tabs type="border-card" @tab-click="changeTab">
+    <el-tabs type="border-card">
       <el-tab-pane label="目标领域分布">
         <div id="echarts1" style="width: 1200px;height:768px;" />
       </el-tab-pane>
@@ -15,7 +15,6 @@
 import 'echarts-gl';
 export default {
   name: 'CombinationAnalysis',
-  computed: {},
   mounted() {
     this.drawChart();
     this.drawChart1();
@@ -126,7 +125,6 @@ export default {
         [2, 21, 4],
         [2, 22, 2],
         [2, 23, 4],
-
       ];
       const option = {
         tooltip: {},
@@ -256,8 +254,7 @@ export default {
       };
       // 使用刚指定的配置项和数据显示图表。
       myChart.setOption(option);
-    },
-    changeTab(e) {}
+    }
   },
 };
 </script>
