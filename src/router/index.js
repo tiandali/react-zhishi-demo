@@ -54,7 +54,7 @@ export const constantRoutes = [
         path: "/home/index",
         component: () => import("@/views/Home/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "首页", icon: "user" }
+        meta: { title: "首页", icon: "dashboard" }
       }
     ]
   },
@@ -67,7 +67,7 @@ export const constantRoutes = [
         path: "/Strategy/index",
         component: () => import("@/views/Strategy/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "战略目标定义", icon: "user" }
+        meta: { title: "战略目标定义", icon: "example" }
       }
     ]
   },
@@ -80,7 +80,7 @@ export const constantRoutes = [
         path: "/ability/index",
         component: () => import("@/views/Ability/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力目标定义", icon: "user" }
+        meta: { title: "能力目标定义", icon: "eye-open" }
       }
     ]
   },
@@ -93,7 +93,7 @@ export const constantRoutes = [
         path: "/abilityAnalysis/index",
         component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力目标分析", icon: "user" }
+        meta: { title: "能力目标分析", icon: "table" }
       }
     ]
   },
@@ -106,7 +106,7 @@ export const constantRoutes = [
         path: "/projectAnalysis/index",
         component: () => import("@/views/ProjectAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "项目匹配分析", icon: "user" }
+        meta: { title: "项目匹配分析", icon: "tree" }
       }
     ]
   },
@@ -119,7 +119,7 @@ export const constantRoutes = [
         path: "/combinationAnalysis/index",
         component: () => import("@/views/CombinationAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "项目投资组合分析", icon: "user" }
+        meta: { title: "项目投资组合分析", icon: "nested" }
       }
     ]
   },
