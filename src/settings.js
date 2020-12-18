@@ -1,5 +1,5 @@
 module.exports = {
-  title: "复盘分析工具",
+  title: "评估分析系统",
 
   /**
    * @type {boolean} true | false

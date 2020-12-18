@@ -85,42 +85,128 @@ export const constantRoutes = [
     ]
   },
   {
-    path: "/abilityAnalysis",
+    path: "/importMsg",
     component: Layout,
-    name: "AbilityAnalysis",
+    name: "ImportMsg",
+    children: [
+      {
+        path: "/importMsg/index",
+        component: () => import("@/views/ImportMsg/index"), // Parent router-view
+        name: "Menu1",
+        meta: { title: "项目信息导入", icon: "nested" }
+      }
+    ]
+  },
+  //能力指标下加一个同级项目信息导入
+  //页面内容主要就是一些下拉框筛选和一些输入框
+  //把三个分析变成二级菜单，一级为分析模块
+  //系统管理模块：用户信息，权限，用户分组等
+
+  {
+    path: "/analysis",
+    component: Layout,
+    // redirect: "/CaseManagement/CatalogManagement/id1",
+    name: "Analysis",
+    meta: {
+      title: "分析模块",
+      icon: "table"
+    },
     children: [
       {
         path: "/abilityAnalysis/index",
         component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力-目标分析", icon: "table" }
-      }
-    ]
-  },
-  {
-    path: "/projectAnalysis",
-    component: Layout,
-    name: "ProjectAnalysis",
-    children: [
+        meta: { title: "能力重复度分析", icon: "" },
+
+      },
       {
         path: "/projectAnalysis/index",
         component: () => import("@/views/ProjectAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "项目-能力匹配分析", icon: "tree" }
-      }
-    ]
-  },
-  {
-    path: "/combinationAnalysis",
-    component: Layout,
-    name: "CombinationAnalysis",
-    children: [
+        meta: { title: "项目-能力匹配分析", icon: "" }
+      },
       {
         path: "/combinationAnalysis/index",
         component: () => import("@/views/CombinationAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "项目投资组合分析", icon: "nested" }
-      }
+        meta: { title: "项目投资组合分析", icon: "" }
+      },
+
+    ]
+  },
+
+
+  // {
+  //   path: "/abilityAnalysis",
+  //   component: Layout,
+  //   name: "AbilityAnalysis",
+  //   children: [
+  //     {
+  //       path: "/abilityAnalysis/index",
+  //       component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
+  //       name: "Menu1",
+  //       meta: { title: "能力重复度分析", icon: "table" },
+
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: "/projectAnalysis",
+  //   component: Layout,
+  //   name: "ProjectAnalysis",
+  //   children: [
+  //     {
+  //       path: "/projectAnalysis/index",
+  //       component: () => import("@/views/ProjectAnalysis/index"), // Parent router-view
+  //       name: "Menu1",
+  //       meta: { title: "项目-能力匹配分析", icon: "tree" }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: "/combinationAnalysis",
+  //   component: Layout,
+  //   name: "CombinationAnalysis",
+  //   children: [
+  //     {
+  //       path: "/combinationAnalysis/index",
+  //       component: () => import("@/views/CombinationAnalysis/index"), // Parent router-view
+  //       name: "Menu1",
+  //       meta: { title: "项目投资组合分析", icon: "nested" }
+  //     }
+  //   ]
+  // },
+
+  {
+    path: "/systerm",
+    component: Layout,
+    // redirect: "/CaseManagement/CatalogManagement/id1",
+    name: "Systerm",
+    meta: {
+      title: "系统管理",
+      icon: "tree"
+    },
+    children: [
+      {
+        path: "/systerm/user",
+        name: "User",
+        component: () => import("@/views/CaseManagement/CaseEntryMaintenance/index"),
+        meta: {
+          title: "用户管理"
+        },
+
+      },
+      {
+        path: "/systerm/root",
+        name: "Root",
+        component: () =>
+          import("@/views/CaseManagement/CaseEntryMaintenance/index"),
+        meta: {
+          title: "权限管理",
+          icon: ""
+        }
+      },
+
     ]
   },
   // {

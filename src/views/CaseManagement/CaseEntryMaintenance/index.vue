@@ -21,35 +21,35 @@ export default {
   data() {
     return {
       tableData: [],
-      btnData: ["修改1", "删除1"],
+      btnData: ["编辑", "删除"],
       tablehead: [
         {
           fixed: true,
           prop: "name",
           label: "名字",
           fit: false,
-          width: "200"
+          width: "200",
         },
         {
           fixed: false,
           prop: "prototype_1",
           label: "电话",
           fit: false,
-          width: "200"
+          width: "200",
         },
         {
           fixed: false,
           prop: "prototype_4",
           label: "属性4",
           fit: false,
-          width: "200"
+          width: "200",
         },
         {
           fixed: false,
           prop: "prototype_4",
           label: "属性5",
           fit: true,
-          width: "200"
+          width: "200",
         },
         {
           fixed: false,
@@ -57,13 +57,13 @@ export default {
           label: "状态",
           fit: true,
           width: "",
-          status_line: true
-        }
-      ]
+          status_line: true,
+        },
+      ],
     };
   },
   components: {
-    datatable
+    datatable,
   },
   mounted() {
     this.fetchData();
@@ -77,12 +77,12 @@ export default {
     },
     fetchData() {
       this.listLoading = true;
-      getTabelData().then(response => {
+      getTabelData().then((response) => {
         this.tableData = response.data.items;
         this.listLoading = false;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

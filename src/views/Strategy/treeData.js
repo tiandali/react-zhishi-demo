@@ -4,59 +4,56 @@ export const treeData = [
     key: "首页",
     children: [
       {
-        title: "xxxx基础设施",
+        title: "xxx区域威慑打击",
         key: "0-0",
         children: [
           {
-            title: "xxxx骨干网基础设施",
-            key: "xxxx骨干网基础设施"
+            title: "NAVY-海基daji系统",
+            key: "NAVY-海基daji系统"
           },
           {
-            title: "xxxx指控网基础设施",
-            key: "指控网基础设施"
+            title: "AIR-战略hongzha",
+            key: "AIR-战略hongzha"
           },
           {
-            title: "xxxx数据中心",
+            title: "ARMY-渡海登岛部队",
             key: "太空-1"
           }
         ]
       },
       {
-        title: "xxxx战略预警能力",
+        title: "xxxx战略预警",
         key: "0-1",
         children: [
           {
-            title: "xxxx探测能力",
+            title: "NAVY-海基daji情报支援",
             key: "核力量-0"
           },
           {
-            title: "xxxx研判能力",
+            title: "AIR-战略hongzha情报支援",
             key: "核力量-1"
           }
         ]
       },
       {
-        title: "xxxx安全对抗能力",
+        title: "xxx信息支援",
         key: "0-2",
         children: [
           {
-            title: "xxxx抗毁能力",
+            title: "NAVY-信息设施1",
             key: "导弹防御-0"
           },
           {
-            title: "xxxx冗余度",
+            title: "NAVY-信息设施2",
             key: "导弹防御-1"
           },
           {
-            title: "xxxx容灾恢复",
+            title: "NAVY-信息设施3",
             key: "导弹防御-2"
           }
         ]
       },
-      {
-        title: "xxxx其他一级能力指标",
-        key: "0-3"
-      }
+
     ]
   }
 ];
