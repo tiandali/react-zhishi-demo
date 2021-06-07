@@ -116,8 +116,7 @@ export const constantRoutes = [
         path: "/abilityAnalysis/index",
         component: () => import("@/views/AbilityAnalysis/index"), // Parent router-view
         name: "Menu1",
-        meta: { title: "能力重复度分析", icon: "" },
-
+        meta: { title: "能力重复度分析", icon: "" }
       },
       {
         path: "/projectAnalysis/index",
@@ -130,11 +129,9 @@ export const constantRoutes = [
         component: () => import("@/views/CombinationAnalysis/index"), // Parent router-view
         name: "Menu1",
         meta: { title: "项目投资组合分析", icon: "" }
-      },
-
+      }
     ]
   },
-
 
   // {
   //   path: "/abilityAnalysis",
@@ -177,38 +174,38 @@ export const constantRoutes = [
   //   ]
   // },
 
-  {
-    path: "/systerm",
-    component: Layout,
-    // redirect: "/CaseManagement/CatalogManagement/id1",
-    name: "Systerm",
-    meta: {
-      title: "系统管理",
-      icon: "tree"
-    },
-    children: [
-      {
-        path: "/systerm/user",
-        name: "User",
-        component: () => import("@/views/CaseManagement/CaseEntryMaintenance/index"),
-        meta: {
-          title: "用户管理"
-        },
+  // {
+  //   path: "/systerm",
+  //   component: Layout,
+  //   // redirect: "/CaseManagement/CatalogManagement/id1",
+  //   name: "Systerm",
+  //   meta: {
+  //     title: "系统管理",
+  //     icon: "tree"
+  //   },
+  //   children: [
+  //     {
+  //       path: "/systerm/user",
+  //       name: "User",
+  //       component: () => import("@/views/CaseManagement/CaseEntryMaintenance/index"),
+  //       meta: {
+  //         title: "用户管理"
+  //       },
 
-      },
-      {
-        path: "/systerm/root",
-        name: "Root",
-        component: () =>
-          import("@/views/CaseManagement/CaseEntryMaintenance/index"),
-        meta: {
-          title: "权限管理",
-          icon: ""
-        }
-      },
+  //     },
+  //     {
+  //       path: "/systerm/root",
+  //       name: "Root",
+  //       component: () =>
+  //         import("@/views/CaseManagement/CaseEntryMaintenance/index"),
+  //       meta: {
+  //         title: "权限管理",
+  //         icon: ""
+  //       }
+  //     },
 
-    ]
-  },
+  //   ]
+  // },
   // {
   //   path: "/",
   //   component: Layout,
